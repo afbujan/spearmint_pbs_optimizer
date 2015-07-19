@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 import smtplib
 
-sender = 'NERSC@nersc.gov'
-receivers = ['afbujan.python@gmail.com']
-message = """From: NERSC <NERSC@nersc.gov>
-To: Alex <afbujan.python@gmail.com>
+sender = 'yourcluster@somewhere.uni'
+receivers = ['you.python@mail.com']
+message = """From: yourcluster <yourcluster@somewhere.uni>
+To: you <you.python@mail.com>
 Subject: Daemon crashed!
 This is bad luck! :-(.
 """
