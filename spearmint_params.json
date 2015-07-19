@@ -1,0 +1,17 @@
+{
+"database_name" :"db",
+
+"parameters"    :{"C"      :{"min" : 0.01, 
+                             "max" : 1000.0,
+                             "type": "float"},
+
+                  "degree" :{"min" : 1,
+                             "max" : 5,
+                             "type":"integer"}},
+
+"outcome"       :{"name" : "Classification accuracy"},
+
+"experiment"    :{"name"        : "Web page classifier",    
+
+                  "description" : "Training a SVM to classify web pages"}
+}
