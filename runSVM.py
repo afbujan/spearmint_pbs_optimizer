@@ -7,6 +7,8 @@ def main():
     parser = OptionParser(usage)
     parser.add_option("-C",type="float",default=0.01)
     parser.add_option("--degree",type="int",default=1)
+    parser.add_option("--path",type="string",default=os.getcwd(),\
+        help="path to experiment directory")
     (options, args) = parser.parse_args()
     run(C=options.C,degree=options.degree)
 
