@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import smtplib
 
-sender = 'yourcluster@somewhere.uni'
+sender = 'yourcluster@somewhere.edu'
 receivers = ['you.python@mail.com']
-message = """From: yourcluster <yourcluster@somewhere.uni>
+message = """From: yourcluster <yourcluster@somewhere.edu>
 To: you <you.python@mail.com>
 Subject: Daemon crashed!
 This is bad luck! :-(.
