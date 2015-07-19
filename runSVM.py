@@ -2,9 +2,6 @@ from sklearn import svm
 from optparse import OptionParser
 from sklearn.datasets import fetch_mldata
 
-global codePath
-codePath = '/global/homes/a/afbujan/code/csc/sparco/opt_daemon_test'
-
 def main():
     usage = '%prog [options]'
     parser = OptionParser(usage)
