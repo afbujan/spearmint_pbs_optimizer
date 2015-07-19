@@ -10,9 +10,9 @@ def main():
     parser.add_option("--path",type="string",default=os.getcwd(),\
         help="path to experiment directory")
     (options, args) = parser.parse_args()
-    run(C=options.C,degree=options.degree)
+    run(C=options.C,degree=options.degree,path=options.path)
 
-def run(C,degree):
+def run(C,degree,path):
     job = {"C":C,"degree":degree}
     data_set = fetch_mldata('yahoo-web-directory-topics')
     train_set = (data_set['data'][:1000],data_set['target'][:1000])
@@ -20,7 +20,7 @@ def run(C,degree):
     learner = svm.SVC(kernel='poly',**job)
     learner.fit(*train_set)
     accuracy = learner.score(*validation_set)
-    f = open('%s/results/Accuracy_C_%s_degree_%s.txt'%(codePath,str(job["C"]),\
+    f = open('%s/results/Accuracy_C_%s_degree_%s.txt'%(path,str(job["C"]),\
                                                     str(job["degree"])),'w')
     f.write(str(accuracy))
     f.close()

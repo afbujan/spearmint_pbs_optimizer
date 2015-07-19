@@ -71,7 +71,7 @@ def submit_job(job):
         '\n#PBS -d %s'%path,
         '\n#PBS -j oe',
         '\n#PBS -l mppwidth=1',
-        '\n#PBS -N opt_daemon_test',
+        '\n#PBS -N opt_daemon',
         '\n#PBS -o %s/output'%path,
         '\n#PBS -q premium',
         '\n#PBS -l walltime=00:10:00',
@@ -105,7 +105,7 @@ def getAccuracy(job):
 
 def checkJobStatus(jobId):
     statusFile = '%s/status.txt'%path
-    os.system('qstat -u afbujan | grep %s > %s'%(jobId,statusFile))
+    os.system('qstat -u %s | grep %s > %s'%(os.getlogin(),jobId,statusFile))
     f = open(statusFile,'r')
     line = f.read()
     if line=='':
